@@ -1,0 +1,11 @@
+{
+    "files.associations": {
+        "*.js": "javascript",
+        "functional": "c",
+        "*.tcc": "c",
+        "string": "c",
+        "string_view": "c",
+        "cmath": "c"
+    },
+    "gitdoc.enabled": true
+}

@@ -1,0 +1,31 @@
+{% extends "layout.html" %}
+
+{% block title %}
+   Quote
+{% endblock %}
+
+{% block main %}
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Ticker</th>
+        </tr>
+    </thead>
+    <tbody>
+            <tr>
+            <td style="width: 33%">{{ result["name"] }}</td>
+            <td style="width: 33%">{{ price }}</td>
+            <td style="width: 33%">{{ result["symbol"] }}</td>
+    </tr>
+    </tbody>
+    </table>
+    <form action="/quote" method="post">
+        <div class="mb-3">
+            <input autocomplete="off" autofocus class="form-control mx-auto w-auto" id="symbol" name="symbol" placeholder="Stock Ticker" type="text" style="text-align: center">
+
+            </div>
+        <button class="btn btn-primary" type="submit">Get Quote</button>
+    </form>
+{% endblock %}

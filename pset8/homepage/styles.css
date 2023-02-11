@@ -1,0 +1,160 @@
+/* Adding for all device support along with the viewport html meta tag */
+@viewport{
+  zoom: 1.0;
+  width: device-width;
+}
+
+/*The navbar was influenced by W3Schools' "How to" content with some design changes*/
+
+/* Background disappears without this*/
+body, html {
+    height: 100%;
+    width: auto;
+}
+
+/* The background */
+.background {
+  background-image: url("/images/sandBackground.jpg");
+  /* Set a specific height */
+  height: 100%;
+}
+
+/* Place text in the middle of the background */
+.mainText {
+  text-align: center;
+  position: absolute;
+  /* Alligning to middle of screen */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+}
+
+/* Add a black background color to the top navigation */
+.navbar {
+    background-color: #1e211f;
+    overflow: none;
+    padding: 5px 0px;
+  }
+
+  /* Style the links inside the navigation bar */
+  .navbar a {
+    margin-left: 5px;
+    overflow: visible;
+    /* max-width: 100%; */
+    color: #f2f2f2;
+    padding: 7px;
+    text-decoration: none;
+    font-size: 17px;
+    font-weight: bold;
+  }
+
+  /* Change the color of links on hover */
+  .navbar a:hover {
+    background-color: #cc7095;
+    color: white;
+    text-shadow: 2px 2px blue;
+  }
+
+  /* Add a color to the active/current link */
+  .navbar a.highlight {
+    padding: 10px;
+    background-color: #adad31;
+    color: black;
+    font-weight: bold;
+    text-shadow: none;
+  }
+
+  /* Adding details to the footer class */
+  .footer {
+    text-align: center;
+    bottom: 0px;
+    padding: 0px;
+    margin: 0px;
+    background-color: #1e211f;
+    color: white;
+    font-weight: bold;
+  }
+
+  .mood-text p {
+    margin-left: 10px;
+    margin-top: 40px;
+    text: justify;
+    font-family: "Verdana";
+  }
+
+  .mood-buttons button {
+    margin-right: 30px;
+    margin-top: 3px;
+    display: inline-block;
+    padding: 12px 22px;
+    font-size: 16px;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color:  green;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 9px #999;
+    font-weight: bold;
+  }
+
+  .mood-buttons button:active {
+    background-color: #3e8e41;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+  }
+    /* Tooltip container */
+.tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black; /* If you want dots under the hoverable text */
+  visibility: visible;
+  opacity: 1;
+}
+
+/* Tooltip text */
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  color: #fff;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+  margin-top: -25px;
+  margin-left: 10px;
+  /* Position the tooltip text */
+  position: absolute;
+  z-index: 1;  /* z-index makes it show over other elements with a lower z-index */
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1; /* Needs the opacity or it won't show :@, took me a while */
+  background-color: black;
+}
+/* Need to add the empty content for the arrow */
+.tooltip .tooltiptext::after {
+  content: " ";
+  position: absolute;
+  /* Positioning tooltip arrow */
+  top: 50%;
+  right: 100%; /* To the left of the tooltip */
+  margin-top: -10px; /* Adjusting arrow to show further out */
+  border-width: 10px;
+  /* Needs these for the arrow to show */
+  border-style: solid;
+  border-color: transparent black transparent transparent;
+}
+
+
+/* Wasted too much time on index and moods and adjusting stuff for mobile so I'm adding some copy paste functionality and quick/ugly redesign */
+.accordion .accordion-item .accordion-header .accordion-button {
+  background-color: salmon;
+  color: yellow;
+}
+
+.accordion .accordion-item .accordion-header .accordion-button:hover {
+  background-color: teal;
+}

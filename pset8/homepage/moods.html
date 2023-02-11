@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+        <link href="styles.css" rel="stylesheet">
+        <meta charset="UTF-8">
+        <title>KonImperator.com</title>
+        <link rel="icon" type="image" href="/images/favicon3.ico">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        <nav class="navbar">
+            <a class="highlight" href="index.html">Home</a>
+            <a href="moods.html">Moods</a>
+            <a href="accordion.html">Accordion</a>
+            <a href="loading.html">Loading</a>
+        </nav>
+        <div class="mood-buttons">
+            <button id="light" style="background-color: yellow; color: black">Light</button>
+            <button id="matrix" style="background-color: black; color: green">Matrix</button>
+            <button id="cool" style="background-color: #66e0ff; color: white">Cool</button>
+        </div>
+            <div class="tooltip" style="margin-left: 150px; margin-top: 20px ">?
+                <span class="tooltiptext">Click on each button to change the page's mood</span>
+        </div>
+
+          <main class="mood-text">
+            <p style="margin-top: 20px">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ultricies quam ac quam varius pulvinar. Ut quam enim, convallis et iaculis nec, efficitur id purus. Ut quis lacus in dolor commodo dapibus in non sem. Aliquam eget faucibus sem. Maecenas tempor mauris dapibus, varius sapien fringilla, euismod nisl. Proin finibus sem hendrerit est ultricies finibus. Phasellus venenatis metus sed nisi tristique varius. Duis dapibus eleifend ipsum, gravida sagittis odio blandit id. Maecenas sit amet ante eget nisl porta lobortis. Etiam iaculis, libero id pharetra porttitor, dolor neque porta tortor, vitae porta arcu dolor a lorem. Vestibulum posuere, lacus quis mollis maximus, magna erat eleifend lorem, at facilisis arcu urna a enim. Nulla facilisi. Donec convallis quam risus, eu efficitur nisi tincidunt sed. Fusce vulputate, turpis in ornare lacinia, ante neque mattis ex, eu faucibus enim massa vel elit. Maecenas tincidunt arcu ornare pharetra ultricies. Maecenas at sem dui.</p>
+
+            <p>Suspendisse sit amet imperdiet ligula, venenatis tristique mi. Morbi porttitor tortor et quam vehicula malesuada. Nullam ut scelerisque augue. Nulla facilisi. Mauris scelerisque felis sed mauris aliquet suscipit. Maecenas et congue libero. Suspendisse quis sapien et orci scelerisque lacinia nec vitae nibh. Sed feugiat vehicula sodales. Sed sem magna, euismod nec bibendum nec, rhoncus quis eros. Etiam vestibulum libero nec finibus egestas. Nunc a purus varius lorem tempor ullamcorper. Ut feugiat ante sit amet purus volutpat, quis volutpat ipsum tincidunt. Nunc imperdiet libero libero, eu lacinia eros pulvinar ac. In sit amet enim et elit tincidunt sodales ac venenatis augue. Phasellus at magna eu erat efficitur pretium. Nam facilisis enim ut eros ultrices auctor.</p>
+
+            <p>Suspendisse nunc felis, tempus vel semper sit amet, convallis non turpis. Suspendisse sit amet posuere magna, lacinia volutpat est. Interdum et malesuada fames ac ante ipsum primis in faucibus. Aenean laoreet volutpat euismod. Quisque lacus ligula, tempor a ultricies in, luctus ac dui. Duis eu semper nulla, eleifend tempus lorem. Fusce auctor aliquet ante eget venenatis. Integer consequat quam ut urna vestibulum placerat. Nullam egestas eleifend nisl, id posuere turpis finibus vitae. Nulla facilisi. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare rhoncus risus.</p>
+
+            <p>Aliquam posuere mi eget ultricies ullamcorper. Pellentesque dolor ligula, pretium sit amet quam non, fermentum pretium dui. In semper ut lacus eget tristique. Nulla sit amet tempor felis, at viverra urna. Fusce varius, urna non gravida pellentesque, dui metus rutrum dui, at molestie ligula nunc eu urna. Sed tristique congue diam, quis consectetur urna pulvinar at. Curabitur ornare iaculis placerat.</p>
+
+            <p>Maecenas at metus vitae massa feugiat lobortis sed sit amet neque. Donec ac massa nibh. Vivamus venenatis a elit sit amet hendrerit. Etiam placerat tellus sit amet nisl vulputate, vitae tempor metus luctus. Maecenas et eros sed augue aliquam pulvinar. Cras nulla tortor, fermentum ut elementum eu, finibus vitae orci. Morbi a hendrerit orci, sed semper mauris. Mauris efficitur malesuada leo non suscipit. Sed malesuada blandit nulla sit amet commodo. Nunc ut metus fringilla elit aliquet facilisis. Fusce euismod magna finibus metus fringilla mollis. Nullam eget aliquam felis.</p>
+          </main>
+        <script>
+        let lightButton = document.getElementById("light");
+        let darkButton = document.getElementById("matrix");
+        let coolButton = document.getElementById("cool");
+        let buttons = [lightButton, darkButton, coolButton];
+        let moodTextArr = document.getElementsByClassName("mood-text")
+
+        for (let button of buttons){
+            button.addEventListener("click", function(){
+            if (button.innerText === "Light"){
+                document.body.style.backgroundColor = "white";
+                for (let el of moodTextArr){
+                    el.style.color = "black"
+                }
+            } else if (button.innerText === "Matrix"){
+                document.body.style.backgroundColor = "black";
+                for (let el of moodTextArr){
+                    el.style.color = "green"
+                }
+                // document.body.style.color = "green";
+            } else if (button.innerText === "Cool"){
+                document.body.style.backgroundColor = "#66e0ff";
+                for (let el of moodTextArr){
+                    el.style.color = "beige"
+                }
+            }
+            });
+        }
+        </script>
+        </body>
+</html>

@@ -1,0 +1,11 @@
+sort1 uses: Bubble sort
+
+How do you know?: This one was left. But it is also the fastest when trying to sort already sorted arrays.
+
+sort2 uses: Merge Sort
+
+How do you know?: The sort is the fastest when checking the reversed 50000 txt. Merge is generally the fastest with large unsorted data sets.
+
+sort3 uses: Selection Sort
+
+How do you know?: This one is the slowest when checking the sorted 50000 txt, meaning it loses time in going through it.
